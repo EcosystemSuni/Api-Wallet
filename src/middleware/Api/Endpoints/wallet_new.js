@@ -27,19 +27,18 @@ module.exports = (req, res, next) => {
 			    }, function(err, result) {
 				if (result) { 
 					var tokens = web3.utils.toBN(result).toString();
-					console.log('Tokens Owned: ' + web3.utils.fromWei(tokens, 'ether'));
+					res.json({
+						status: 'exist',
+						data: data,
+						balance: web3.utils.fromWei(tokens, 'ether')
+					});
 				}
 				else {
 					console.log(err); // Dump errors here
 				}
 			});
 
-
-
-			res.json({
-				status: 'exist',
-				data: data
-			});
+			
 		} else {
 
 			let us = new Users({
