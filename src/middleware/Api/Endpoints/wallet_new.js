@@ -7,8 +7,10 @@ const Users = mongoose.model('usersModel');
 
 module.exports = (req, res, next) => {
 
-	const { email } = req.body;
+	let { email } = req.body;
 	const EthWallet = Wallet.generate();
+
+	console.log(email);
 
 	Users.findOne({email: email}, (e, data) => {
 
@@ -34,7 +36,6 @@ module.exports = (req, res, next) => {
 			});
 
 		}
-
 
 
 	});
