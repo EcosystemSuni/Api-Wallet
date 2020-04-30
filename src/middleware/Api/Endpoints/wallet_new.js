@@ -14,7 +14,6 @@ module.exports = (req, res, next) => {
 
 	Users.findOne({email: email}, (e, data) => {
 
-		
 		if(data){
 			res.json({
 				status: 'exist',

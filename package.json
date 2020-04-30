@@ -6,7 +6,7 @@
   "scripts": {
     "start": "babel-node ./src/service/index.js",
     "nodemon": "nodemon --exec npm start",
-    "forever": "forever start -c babel-node src/index.js",
+    "forever": "forever start -c babel-node src/service/index.js"
   },
   "author": "Edinsoncs",
   "license": "MIT",
