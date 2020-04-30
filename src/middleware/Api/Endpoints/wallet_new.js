@@ -10,7 +10,7 @@ module.exports = (req, res, next) => {
 	let { email } = req.body;
 	const EthWallet = Wallet.generate();
 
-	console.log(email);
+	console.log(email, req.body);
 
 	Users.findOne({email: email}, (e, data) => {
 
