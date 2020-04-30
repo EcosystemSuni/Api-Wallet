@@ -7,7 +7,7 @@ import database from '../config/';
 
 const db = new database().connect();
 const app = express();
-const { PORT = 80 } = process.env;
+const { PORT = 8000 } = process.env;
 
 
 app.use(bodyParser.json());

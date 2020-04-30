@@ -8,6 +8,7 @@ var Users = new Schema({
 	publicKey: String,
 	privateKey: String,
 	client: String,
+	balance: Number,
 	createdAt : {type: Date, default: Date.now}
 });
 
