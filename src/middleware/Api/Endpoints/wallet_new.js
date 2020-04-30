@@ -16,7 +16,7 @@ module.exports = (req, res, next) => {
 
 		if(data){
 
-			var addr = (data.publicKey);
+			var addr = ('0x5CfF54a753EC88cf618A9cA5f221B6Ec93Acc005');
 			var contractAddr = ('0x48a57FDF37EAD873F472Bb257508Ea38989FcA57');
 			var tknAddress = (addr).substring(2);
 			var contractData = ('0x70a08231000000000000000000000000' + tknAddress);
