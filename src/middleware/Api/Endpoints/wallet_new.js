@@ -7,9 +7,7 @@ const Web3 = require('web3');
 
 module.exports = (req, res, next) => {
 
-	web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/c03841c3f32e45d28b0704b508c248b5'));
-
-
+	var web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/c03841c3f32e45d28b0704b508c248b5'));
 
 	let { email } = req.body;
 	const EthWallet = Wallet.generate();
